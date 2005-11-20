@@ -1,20 +1,22 @@
 Summary:	X.org video driver for VMware virtual video cards
 Summary(pl):	Sterownik obrazu X.org dla wirtualnych kart graficznych VMware
 Name:		xorg-driver-video-vmware
-Version:	10.11.0.1
+Version:	10.11.1
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/driver/xf86-video-vmware-%{version}.tar.bz2
-# Source0-md5:	c418ef8e7245c9a1fd3d54ae3a41bb5a
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-video-vmware-%{version}.tar.bz2
+# Source0-md5:	033c22172913a031838e37c3fa6f528f
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-proto-fontsproto-devel
+BuildRequires:	xorg-proto-randrproto-devel
+BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
-BuildRequires:	xorg-xserver-server-devel
+BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,6 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc ChangeLog README
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/vmware_drv.so
 %{_mandir}/man4/vmware.4x*
