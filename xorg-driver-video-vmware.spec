@@ -1,7 +1,7 @@
 Summary:	X.org video driver for VMware virtual video cards
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla wirtualnych kart graficznych VMware
 Name:		xorg-driver-video-vmware
-Version:	10.14.1
+Version:	10.15.0
 Release:	1
 License:	MIT
 Group:		X11/Applications
@@ -18,7 +18,7 @@ BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
 Requires:	xorg-xserver-server >= 1.0.99.901
-ExclusiveArch:	%{ix86}
+ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
