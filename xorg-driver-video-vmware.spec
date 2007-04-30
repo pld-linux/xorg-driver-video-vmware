@@ -6,7 +6,7 @@ Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vmware-%{version}.tar.bz2
-# Source0-md5:	eaf1ce9fa23363799140602afaa10f37
+# Source0-md5:	9ad83ec872917a9c35bf3254ef455399
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
