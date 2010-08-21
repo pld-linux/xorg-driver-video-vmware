@@ -1,12 +1,12 @@
 Summary:	X.org video driver for VMware virtual video cards
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla wirtualnych kart graficznych VMware
 Name:		xorg-driver-video-vmware
-Version:	10.16.9
-Release:	3
+Version:	11.0.2
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vmware-%{version}.tar.bz2
-# Source0-md5:	3b3d38abfa1f8be4b1e26dcd236bc94f
+# Source0-md5:	00c3a70870abcda5f340497b0285dab1
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -64,4 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/vmware_drv.so
+%attr(755,root,root) %{_libdir}/xorg/modules/drivers/vmwlegacy_drv.so
 %{_mandir}/man4/vmware.4*
