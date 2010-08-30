@@ -17,11 +17,13 @@ BuildRequires:	xorg-lib-libpciaccess-devel >= 0.8.0
 BuildRequires:	xorg-proto-fontsproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-proto-renderproto-devel
+BuildRequires:	xorg-proto-videoproto-devel
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xineramaproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
-BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
-%requires_xorg_xserver_videodrv
-Requires:	xorg-xserver-server >= 1.0.99.901
+BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xorg-xserver-server-devel >= 1.7.0
+%{?requires_xorg_xserver_videodrv}
+Requires:	xorg-xserver-server >= 1.7.0
 Obsoletes:	X11-driver-vmware < 1:7.0.0
 Obsoletes:	XFree86-driver-vmware < 1:7.0.0
 ExclusiveArch:	%{ix86} %{x8664}
@@ -44,8 +46,7 @@ Wykrywa automatycznie wersję dowolnej wirtualnej karty SVGA VMware.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure \
-	--disable-static
+%configure
 
 %{__make}
 
