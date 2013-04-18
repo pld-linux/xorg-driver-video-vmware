@@ -1,13 +1,12 @@
 Summary:	X.org video driver for VMware virtual video cards
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla wirtualnych kart graficznych VMware
 Name:		xorg-driver-video-vmware
-Version:	13.0.0
-Release:	3
+Version:	13.0.1
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vmware-%{version}.tar.bz2
-# Source0-md5:	b72be57517cbc7a56362f2ee0f092269
-Patch0:		build.patch
+# Source0-md5:	b08e0195ebf3f88a82129322cb93da08
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	Mesa-libxatracker-devel >= 8
 BuildRequires:	autoconf >= 2.60
@@ -44,7 +43,6 @@ Wykrywa automatycznie wersję dowolnej wirtualnej karty SVGA VMware.
 
 %prep
 %setup -q -n xf86-video-vmware-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}
