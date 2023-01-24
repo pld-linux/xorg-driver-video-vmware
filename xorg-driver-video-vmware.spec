@@ -1,20 +1,21 @@
 Summary:	X.org video driver for VMware virtual video cards
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla wirtualnych kart graficznych VMware
 Name:		xorg-driver-video-vmware
-Version:	13.3.0
-Release:	4
+Version:	13.4.0
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-vmware-%{version}.tar.bz2
-# Source0-md5:	08d66d062055080ff699ab4869726ea2
+Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-vmware-%{version}.tar.xz
+# Source0-md5:	8c9ec4decaa262eb33a474219232bb1b
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	Mesa-libxatracker-devel >= 8
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
-BuildRequires:	libdrm-devel >= 2.4.38
+BuildRequires:	libdrm-devel >= 2.4.96
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	udev-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
@@ -28,8 +29,9 @@ BuildRequires:	xorg-proto-xineramaproto-devel
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.12.0
+BuildRequires:	xz
 %{?requires_xorg_xserver_videodrv}
-Requires:	libdrm >= 2.4.38
+Requires:	libdrm >= 2.4.96
 Requires:	xorg-xserver-server >= 1.12.0
 Provides:	xorg-driver-video
 Obsoletes:	X11-driver-vmware < 1:7.0.0
